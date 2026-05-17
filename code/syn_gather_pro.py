@@ -8,10 +8,10 @@ print("Using device:", device)
 
 trace_indices = [99, 299, 499, 699, 899]
 
-clean_3d = np.load('Get_angle_gathers_AVOmodeling/angleGathers0To40.npy')
+clean_3d = np.load('angleGathers0To40.npy')
 print('3D clean shape:', clean_3d.shape)
 
-save_dir = 'Get_angle_gathers_AVOmodeling/pro'
+save_dir = 'pro'
 os.makedirs(save_dir, exist_ok=True)
 
 results = []
@@ -23,7 +23,7 @@ for trace_index in trace_indices:
 
     clean = clean_3d[:, :, trace_index].T
 
-    noisy_path = f'Get_angle_gathers_AVOmodeling/angleGathers0To40_AG_trace_index-{trace_index}-noisy.npy'
+    noisy_path = f'angleGathers0To40_AG_trace_index-{trace_index}-noisy.npy'
     if not os.path.exists(noisy_path):
         print(f'[Skip] No noisy file found: {noisy_path}')
         continue
