@@ -40,7 +40,7 @@ for trace_index in trace_indices:
         trace_size=8,
         time_shift=1,
         trace_shift=1,
-        batch_size=256,
+        batch_size=512,
         epochs=10,
         log_interval=2,
         lr=5e-4,
