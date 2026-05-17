@@ -7,6 +7,8 @@ This repository provides the implementation of LADNet, a patch-based self-superv
 
 The proposed framework first divides each noisy CRP gather into overlapping two-dimensional patches. Each patch is then vectorized as the network input and is also used as the self-supervised target. The core denoising model is a learnable activation denoising network, termed LADNet, which consists of fully connected layers, KAN-layer-based learnable activation functions, soft attention weighting modules, and residual connections. The network is optimized using a Softplus-smoothed log-cosh (SPLC) loss to improve robustness to high-amplitude incoherent noise.
 
+<img src='https://github.com/chen-gui/LADNet/blob/main/fig/fig1' alt='Workflow' width=960/>
+
 ## Reference
 
     Chen G. Self-supervised denoising of seismic CRP gathers with a learnable activation network[J]. Journal of Seismic Exploration, 2026.
